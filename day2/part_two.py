@@ -15,6 +15,8 @@ if __name__ == "__main__":
             curr = int("1" + "0"*(count-1))
             if(low % count != 0):
                 low += count - low%count
+            if(low == 1):
+                low += 1
             while(len(str(curr)) == count):
                 if(count == 1 or curr % int("1"*count) != 0):
                     for i in range(low//count, (high//count) + 1):
@@ -24,5 +26,3 @@ if __name__ == "__main__":
                 curr += 1
             count += 1
     print(invalids)
-    print(found)
-            
